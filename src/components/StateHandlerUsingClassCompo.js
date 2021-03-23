@@ -7,6 +7,8 @@ class StateHandlerUsingClassCompo extends Component {
       message: "Please Hit That Like Button",
       buttonName: "Like",
     };
+
+    this.handleEvent = this.handleEvent.bind(this); // binding event handler method to the event in constructor.
   }
 
   // Conditional Rendering concept with event handling concept.
@@ -31,7 +33,9 @@ class StateHandlerUsingClassCompo extends Component {
         <h4 className="text-danger">{this.state.message}</h4>
         <button
           className="btn btn-success mt-3"
-          onClick={() => this.handleEvent()}
+          //onClick={() => this.handleEvent()} --> using arrow function.
+          //onClick = {this.handleEvent.bind(this)} --> using bind keyword for event handler binding
+          onClick={this.handleEvent}
         >
           {this.state.buttonName}
         </button>
