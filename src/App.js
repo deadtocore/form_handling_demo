@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import ClassComponent from './components/ClassComponent';
+import EventHandlerUsingClassComp from './components/EventHandlerUsingClassComp';
+import EventHandlerUsingFunctionalComp from './components/EventHandlerUsingFunctionalComp';
+import FunctionalComponent from './components/FunctionalComponent';
+import StateHandlerUsingClassCompo from './components/StateHandlerUsingClassCompo';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FunctionalComponent/>
+      <ClassComponent/>
+      <EventHandlerUsingFunctionalComp/>
+      <EventHandlerUsingClassComp/>
+      <StateHandlerUsingClassCompo/>
     </div>
   );
 }
